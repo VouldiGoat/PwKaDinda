@@ -6,9 +6,12 @@ use App\Http\Controllers\PDFController;
 
 Route::redirect('/', '/guru');
 
-// Route PDF harus di atas route resource guru
+// Route PDF dan Excel diletakkan sebelum resource
 Route::get('guru/pdf', [PDFController::class, 'generate'])
     ->name('guru.pdf');
+
+Route::get('guru/excel', [GuruController::class, 'exportExcel'])
+    ->name('guru.excel');
 
 // Route CRUD Guru
 Route::resource('guru', GuruController::class)->only([

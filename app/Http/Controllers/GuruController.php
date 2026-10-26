@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Guru;
+use App\Exports\GuruExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 class GuruController extends Controller
@@ -77,5 +79,14 @@ class GuruController extends Controller
         return redirect()
             ->route('guru.index')
             ->with('success', 'Data guru berhasil diperbarui!');
+    }
+
+        // Mengunduh data guru dalam format Excel
+    public function exportExcel()
+    {
+        return Excel::download(
+            new GuruExport(),
+            'data-guru.xlsx'
+        );
     }
     }

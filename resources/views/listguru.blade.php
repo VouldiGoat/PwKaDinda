@@ -164,6 +164,7 @@
         </div>
         <a class="button" href="{{ route('guru.create') }}">+ Tambah Guru</a>
         <a href="{{ route('guru.pdf') }}" class="button" style="background-color: #16a34a;">Cetak PDF</a>
+        <a class="button" href="{{ route('guru.excel') }}" style="background-color: #16a34a;">Unduh Excel</a>
     </header>
 
 
