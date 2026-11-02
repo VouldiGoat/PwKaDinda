@@ -6,12 +6,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
+        tailwindcss(),
+        react(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.jsx'],
             refresh: true,
         }),
-        tailwindcss(),
-        react(),
     ],
     server: {
         watch: {
