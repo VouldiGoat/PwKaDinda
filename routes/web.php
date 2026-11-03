@@ -26,3 +26,7 @@ Route::resource('guru', GuruController::class)->only([
 // Route Hapus Guru
 Route::delete('guru/{id}', [GuruController::class, 'destroy'])
     ->name('guru.destroy');
+
+Route::get('/tesreact', function(){
+    return view('testreact');
+});

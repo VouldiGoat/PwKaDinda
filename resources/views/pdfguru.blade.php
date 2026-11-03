@@ -3,34 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Siswa</title>
-
-    <style>
-        body {
-            font-family: sans-serif;
-            font-size: 12px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid #333;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #eeeeee;
-        }
-    </style>
+    @viteReactRefresh
+    @vite('resources/js/pdfguru.jsx')
 </head>
 <body>
+
+    <div id="pdfguru"></div>
+
     <h2>Daftar Data Guru</h2>
 
     <table>
